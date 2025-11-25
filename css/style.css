@@ -1,0 +1,123 @@
+/* --- 1. ОБЩИЕ СТИЛИ И СБРОС --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333; 
+    background-color: #f4f4f9; 
+    /* Добавляем фон 'fon.jpg' для всей страницы или основного контента */
+    /* ВНИМАНИЕ: Если 'fon' — это просто маленький узор, используйте background-repeat: repeat; */
+    /* Если это общая текстура, используйте ее здесь. */
+    /* background: url('img/fon.jpg') repeat; */ 
+}
+
+/* --- 2. СТИЛИ ШАПКИ САЙТА (HEADER / HERO SECTION) --- */
+
+header {
+    /* Фон-картинка: Используем ВАШУ картинку 'werh.jpg' */
+    /* ПРЕДПОЛАГАЕМ, что 'werh' - это hero-изображение (верхняя картинка) */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Слой затемнения */
+        url('img/werh.jpg') no-repeat center center/cover; /* Путь к верхней картинке */
+    color: white; 
+    padding: 60px 20px; 
+    text-align: center;
+    min-height: 400px; /* Увеличим высоту для красоты */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-top: 10px; /* Добавим отступ от логотипа */
+    margin-bottom: 10px;
+}
+
+/* --- 3. СТИЛИ ДЛЯ ЛОГОТИПА --- */
+
+/* Вам нужно добавить тег <img> в HTML для логотипа, например: <img src="img/logo.jpg" alt="Логотип Электрика Брюссель" class="header-logo"> */
+.header-logo {
+    max-width: 120px; /* Размер логотипа */
+    height: auto;
+    border-radius: 50%; /* Если хотите, чтобы логотип был круглым */
+    border: 3px solid #f3a61d;
+}
+
+/* --- 4. СТИЛИ КНОПКИ (CTA Button) --- */
+
+.cta-button {
+    display: inline-block;
+    background-color: #f3a61d; /* Желто-оранжевый */
+    color: #1a1a1a; 
+    padding: 12px 30px;
+    margin-top: 15px;
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #d18f0a; 
+}
+
+/* --- 5. СТИЛИ ОСНОВНОГО КОНТЕНТА (MAIN) --- */
+
+main {
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto; 
+}
+
+section {
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+h3, h4 {
+    color: #005a9c; /* Профессиональный синий */
+    margin-bottom: 15px;
+}
+
+/* Стилизация разделов портфолио с фотографиями */
+#portfolio {
+    display: flex;
+    flex-wrap: wrap; /* Чтобы элементы переносились на новую строку */
+    gap: 20px; /* Расстояние между блоками */
+    justify-content: center;
+}
+
+.portfolio-item {
+    flex-basis: 300px; /* Базовый размер для каждого элемента */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Обрезаем, чтобы фото не выходило за края */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px; /* Фиксированная высота для всех фото */
+    object-fit: cover; /* Обрезка фото, чтобы оно занимало всю область */
+    display: block;
+}
+
+.portfolio-item p {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- 6. СТИЛИ ФУТЕРА (FOOTER) и т.д. --- */
+/* (Остальные стили, включая lang-switcher и footer, остаются такими же) */
+
+/* ... (здесь идут стили #lang-switcher и footer из предыдущего ответа) ... */
